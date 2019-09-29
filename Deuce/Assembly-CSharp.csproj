@@ -95,7 +95,7 @@
     <Compile Include="Assets\scripts\controllers\TestMovement.cs" />
     <Compile Include="Assets\scripts\controllers\ZaakirController.cs" />
     <Compile Include="Assets\scripts\Dialogue_Control_V2\Dialogue_Database.cs" />
-    <Compile Include="Assets\scripts\Dialogue_Control_V2\ScreenSpaceHandler.cs" />
+    <Compile Include="Assets\scripts\Dialogue_Control_V2\Dialogue_FrontEnd_Handler.cs" />
     <Compile Include="Assets\scripts\else\DynamicSortingOrder.cs" />
     <Compile Include="Assets\scripts\else\GameBool.cs" />
     <Compile Include="Assets\scripts\else\JerrytalkBool.cs" />

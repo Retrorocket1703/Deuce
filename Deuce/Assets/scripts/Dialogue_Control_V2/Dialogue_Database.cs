@@ -8,12 +8,14 @@ public class Dialogue_Database : MonoBehaviour
 {
     //This is where the database is stored in volatile memory.
     string[] LoadedVolatileDatabase;
-    string VolatileString;
+    public static string VolatileString;
     public static bool FoundKeyword = false;
+    public static bool IsReading = false;
     
     void Start()
     {
-        ReadFromTextDatabase("./Assets/scripts/Dialogue_Control_V2/DatabaseTextFiles/DialogueDatabaseNonVolatile.txt", '@', 1, false, "Null");
+        //This is for example. If you want to test this script, uncomment the following line.
+        //ReadFromTextDatabase("./Assets/scripts/Dialogue_Control_V2/DatabaseTextFiles/DialogueDatabaseNonVolatile.txt", '@', 1, false, "Null");
     }
 
     // This is used to read the data from a file.
@@ -21,6 +23,7 @@ public class Dialogue_Database : MonoBehaviour
     // DelimiterInp is used to decide what character you want the delimiter to be. This is syntax, and should be universal.
     public void ReadFromTextDatabase(string Path, char delimiterInp, int Line, bool SearchKeywords, string KeywordSearchInp)
     {
+        IsReading = true;
         //Create a new streamreader.
         StreamReader reader = new StreamReader(Path); 
         //Create the reader.
@@ -58,6 +61,7 @@ public class Dialogue_Database : MonoBehaviour
                 FoundKeyword = false;
             }
         }
+
     }
 
 
